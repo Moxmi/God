@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
+    "protractor": "~1.0.0",
+    "http-server": "^0.6.1",
+    "tmp": "0.0.23",
+    "bower": "^1.3.1",
+    "shelljs": "^0.2.6"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Moxmi/God.git"
+  },
+  "keywords": [
+    "God"
+  ],
+  "author": "liuhaobo",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Moxmi/God/issues"
+  }
+}
