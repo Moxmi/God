@@ -1,2 +1,4 @@
 # God
-Everyone is their own God
+
+This is a sample BBS.
+
