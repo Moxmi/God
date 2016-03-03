@@ -5,7 +5,8 @@
  *
  *
  */
-var modules = ['directive', 'controllers', 'ngRoute'];
+
+var modules = ['directive', 'ngRoute', 'controllers'];
 var app = angular.module('God', modules);
 
 // set route info.

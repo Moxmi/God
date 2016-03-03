@@ -1,7 +1,27 @@
-<form id="post">
-    <input focus type="text" placeholder="标题" />
-    <textarea focus  placeholder="正文"></textarea>
+<form id="post" ng-submit="form.submit()" enctype="multipart/form-data">
+    <input focus type="text" placeholder="标题" ng-model="form.title"/>
+    <textarea focus  placeholder="正文" ng-model="form.content"></textarea>
     <div>
-        <button class="btn btn-danger pull-right" type="submit">提交发布</button>
+        <button class="btn btn-danger pull-right" >提交发布</button>
     </div>
 </form>
+<!--table>
+  <tr>
+    <th>主题 -
+      <button class="btn btn-danger">
+        <a href="/#/post/add">
+          发表文章
+        </a>
+      </button>
+    </th>
+  </tr>
+
+  <tr ng-repeat="post in posts">
+    <td><a href="/#/post/{{ post._id }}">{{ post.title }}</a></td>
+    <td class="text-muted">{{ post.date | date: 'yyyy-MM-DD HH:mm:ss' }}</td>
+  </tr>
+
+  <tr ng-hide="posts.length">
+    <td colspan="2" class="text-muted text-center">没有文章呢</td>
+  </tr>
+</table-->

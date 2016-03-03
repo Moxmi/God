@@ -1,28 +1,21 @@
 <div class="user">
-    <div class="text-muted">2014-03-31 19:59:30</div>
+  <div class="text-muted">{{ post.date | date: 'yyyy-MM-dd HH:mm:ss' }}</div>
 </div>
 <div class="contents">
-    <h2 class="title">假如地球马上爆炸，我用100倍的光速离开地球，理论上可以看到没爆炸前的样子？</h2>
+  <h2 class="title">{{ post.title }}</h2>
 
-    <p>可爆炸前我用100倍光速在地球上面跑圈是不是依然地球还是会爆炸？而不会时光倒流？</p>
+    <p>{{ post.content }}</p>
     <div id="comments">
-    
         <table>
-            <tr>
-                <td>#1</td>
-                <td>会的吧</td>
-            </tr>
-            <tr>
-                <td>#2</td>
-                <td>哈哈哈哈 笑死我了</td>
+            <tr ng-repeat="comment in post.comments">
+                <td>#{{ $index + 1 }}</td>
+                <td>{{ comment.comment }}</td>
             </tr>
         </table>
 
-        <form>
-            <textarea placeholder="我想说.."></textarea>
+        <form ng-submit="form.submit()">
+            <textarea ng-model="form.comment" placeholder="我想说.."></textarea>
             <button class="btn btn-danger pull-right">发表评论</button>
         </form>
     </div>
 </div>
-
-    
