@@ -10,7 +10,6 @@ angular.module('controllers', [])
               function ($scope, $http) {
     $http.get('/posts')
       .success(function (data) {
-        console.log(data);
         $scope.posts = data;
       })
       .error(function (err) {
@@ -21,7 +20,6 @@ angular.module('controllers', [])
               function ($scope, $http, $location) {
     $scope.form = {};
     $scope.form.submit = function () {
-      console.log($scope.form)
       $http.post('/post/add', $scope.form)
         .success(function (data) {
           $location.url('/');
@@ -35,7 +33,6 @@ angular.module('controllers', [])
               function ($scope, $http, $routeParams) {
     $http.get('/post/' + $routeParams._id)
       .success(function (data) {
-        console.log(data);
         $scope.post = data;
       });
 
