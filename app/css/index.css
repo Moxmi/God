@@ -77,6 +77,10 @@ input:focus, textarea:focus {
     margin: 0 0 20px 0;
 }
 
+#main .article {
+    display: table-row;
+}
+
 #main .user {
     min-width: 120px;
     padding: 0 15px 0 0;
