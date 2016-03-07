@@ -25,7 +25,7 @@ module.exports = function (app) {
 
     // Receive and save article into mongodb
     app.post('/post/add', function (req, res) {
-      console.log(req.body);
+      req.body.date = Date.now();
       var article = new post(req.body);
 
       article.save(function (err, docs) {
